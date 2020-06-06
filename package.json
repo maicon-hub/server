@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node src/server.ts",
+    "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
     "knex:seeds": "knex --knexfile knexfile.ts seed:run",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
   },
@@ -15,6 +15,8 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
+    "@types/cors": "^2.8.6",
+    "cors": "^2.8.5",
     "knex": "^0.21.1",
     "sqlite3": "^4.2.0",
     "ts-node-dev": "^1.0.0-pre.44"
